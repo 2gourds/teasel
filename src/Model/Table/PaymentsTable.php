@@ -36,32 +36,14 @@ class PaymentsTable extends Table
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
 
-        $this->addBehavior('Timestamp');
+        $this->addBehavior('Timestamp', [
+            'events' => [
+                'Model.beforeSave' => [
+                    'created' => 'new',
+                    'updated' => 'always'
+                ]
+            ]
+        ]);
     }
 
-    /**
-     * Default validation rules.
-     *
-     * @param \Cake\Validation\Validator $validator Validator instance.
-     * @return \Cake\Validation\Validator
-     */
-    public function validationDefault(Validator $validator)
-    {
-        $validator
-            ->integer('id')
-            ->allowEmptyString('id', null, 'create');
-
-        $validator
-            ->scalar('order_uid')
-            ->maxLength('order_uid', 20)
-            ->requirePresence('order_uid', 'create')
-            ->notEmptyString('order_uid');
-
-        $validator
-            ->integer('amount')
-            ->requirePresence('amount', 'create')
-            ->notEmptyString('amount');
-
-        return $validator;
-    }
 }

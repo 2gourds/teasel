@@ -32,18 +32,30 @@
 
 		onApprove: function(data, actions) {
 			return actions.order.capture().then(function(details) {
-				alert('Transaction completed by ' + details.payer.name.given_name);
+				// alert('Transaction completed by ' + details.payer.name.given_name);
+				// Add CSRF token to fetch request.
+				const csrfToken = <?php echo json_encode($this->request->getParam('_csrfToken')) ?>;
+				const headers = new Headers({
+					'Content-Type': 'application/json',
+					// 'Content-Type': 'x-www-form-urlencoded',
+					'X-CSRF-TOKEN': csrfToken
+				});
 				// Call server side API to save the transaction
-				return fetch('/api/paypal/payment', {
+				// TODO: change API link as dynamic link
+				return fetch('/teasel/api/paypal/payment', {
 					method: 'post',
-					headers: {
-						'content-type': 'application/json'
-					},
+					headers,
 					body: JSON.stringify({
-						orderID: data.orderID
+						orderId: data.orderID
 					})
+				}).then(function(res) {
+					console.log(res);
 				});
 			});
+		},
+
+		onError: function(err) {
+			console.log('Error:' + err);
 		}
 	}).render('#paypal-button-container');
 </script>
