@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\ORM\TableRegistry;
 
 /**
  * Apis Controller
@@ -21,7 +22,14 @@ class ApisController extends AppController
 		// Since the is an API call, disable rendering of views.
 		$this->autoRender = false;
 
+		// Get the POST data.
 		$orderId = $this->request->getData('orderId');
-		debug($orderId);
+		
+		// Create new payment entity and save the data.
+		$paymentsTable = TableRegistry::getTableLocator()->get('Payments');
+		$payment = $paymentsTable->newEntity();
+		$payment->order_uid = $orderId;
+		$payment->amount = 0.01; // TODO: Set amount based on specific value.
+		$paymentsTable->save($payment);
 	}
 }

@@ -45,7 +45,7 @@ class ApisControllerTest extends TestCase
 
 		// Retrieve the data as defined by the Order ID saved.
 		$this->Payments = TableRegistry::getTableLocator()->get('Payments');
-		$payment = $this->Payments->findByOrderId($data['orderId'])->first();
+		$payment = $this->Payments->findByOrderUid($data['orderId'])->first();
 		
 		// Assert whether or not the data with the specific Order ID has been saved or not.
 		$this->assertResponseOk();

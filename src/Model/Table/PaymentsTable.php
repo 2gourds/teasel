@@ -9,8 +9,6 @@ use Cake\Validation\Validator;
 /**
  * Payments Model
  *
- * @property &\Cake\ORM\Association\BelongsTo $Orders
- *
  * @method \App\Model\Entity\Payment get($primaryKey, $options = [])
  * @method \App\Model\Entity\Payment newEntity($data = null, array $options = [])
  * @method \App\Model\Entity\Payment[] newEntities(array $data, array $options = [])
@@ -39,11 +37,6 @@ class PaymentsTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
-
-        $this->belongsTo('Orders', [
-            'foreignKey' => 'order_id',
-            'joinType' => 'INNER'
-        ]);
     }
 
     /**
@@ -59,24 +52,16 @@ class PaymentsTable extends Table
             ->allowEmptyString('id', null, 'create');
 
         $validator
+            ->scalar('order_uid')
+            ->maxLength('order_uid', 20)
+            ->requirePresence('order_uid', 'create')
+            ->notEmptyString('order_uid');
+
+        $validator
             ->integer('amount')
             ->requirePresence('amount', 'create')
             ->notEmptyString('amount');
 
         return $validator;
-    }
-
-    /**
-     * Returns a rules checker object that will be used for validating
-     * application integrity.
-     *
-     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
-     * @return \Cake\ORM\RulesChecker
-     */
-    public function buildRules(RulesChecker $rules)
-    {
-        $rules->add($rules->existsIn(['order_id'], 'Orders'));
-
-        return $rules;
     }
 }

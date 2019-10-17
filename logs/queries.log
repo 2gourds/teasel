@@ -1,0 +1,120 @@
+2019-10-17 10:20:30 Debug: duration=1 rows=1 SHOW TABLES FROM `teasel`
+2019-10-17 10:20:30 Debug: duration=1 rows=4 SHOW FULL COLUMNS FROM `payments`
+2019-10-17 10:20:30 Debug: duration=0 rows=1 SHOW INDEXES FROM `payments`
+2019-10-17 10:20:30 Debug: duration=2 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'teasel' AND kcu.TABLE_NAME = 'payments' AND rc.TABLE_NAME = 'payments'
+2019-10-17 10:20:30 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'payments'
+2019-10-17 10:20:30 Debug: duration=1 rows=4 SHOW FULL COLUMNS FROM `payments`
+2019-10-17 10:20:30 Debug: duration=0 rows=1 SHOW INDEXES FROM `payments`
+2019-10-17 10:20:30 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'teasel' AND kcu.TABLE_NAME = 'payments' AND rc.TABLE_NAME = 'payments'
+2019-10-17 10:20:30 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'payments'
+2019-10-17 10:34:06 Debug: duration=1 rows=1 SHOW TABLES FROM `teasel`
+2019-10-17 10:34:06 Debug: duration=2 rows=5 SHOW FULL COLUMNS FROM `payments`
+2019-10-17 10:34:06 Debug: duration=0 rows=1 SHOW INDEXES FROM `payments`
+2019-10-17 10:34:06 Debug: duration=2 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'teasel' AND kcu.TABLE_NAME = 'payments' AND rc.TABLE_NAME = 'payments'
+2019-10-17 10:34:06 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'payments'
+2019-10-17 10:34:06 Debug: duration=1 rows=0 SHOW FULL COLUMNS FROM `orders`
+2019-10-17 10:34:11 Debug: duration=0 rows=5 SHOW FULL COLUMNS FROM `payments`
+2019-10-17 10:34:11 Debug: duration=0 rows=1 SHOW INDEXES FROM `payments`
+2019-10-17 10:34:11 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'teasel' AND kcu.TABLE_NAME = 'payments' AND rc.TABLE_NAME = 'payments'
+2019-10-17 10:34:11 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'payments'
+2019-10-17 10:34:17 Debug: duration=1 rows=1 SHOW TABLES FROM `teasel`
+2019-10-17 10:34:17 Debug: duration=1 rows=5 SHOW FULL COLUMNS FROM `payments`
+2019-10-17 10:34:17 Debug: duration=0 rows=1 SHOW INDEXES FROM `payments`
+2019-10-17 10:34:17 Debug: duration=2 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'teasel' AND kcu.TABLE_NAME = 'payments' AND rc.TABLE_NAME = 'payments'
+2019-10-17 10:34:17 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'payments'
+2019-10-17 10:34:17 Debug: duration=0 rows=0 SHOW FULL COLUMNS FROM `orders`
+2019-10-17 10:34:19 Debug: duration=1 rows=5 SHOW FULL COLUMNS FROM `payments`
+2019-10-17 10:34:19 Debug: duration=0 rows=1 SHOW INDEXES FROM `payments`
+2019-10-17 10:34:19 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'teasel' AND kcu.TABLE_NAME = 'payments' AND rc.TABLE_NAME = 'payments'
+2019-10-17 10:34:19 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'payments'
+2019-10-17 11:33:41 Debug: duration=1 rows=1 SHOW TABLES FROM `teasel`
+2019-10-17 11:33:41 Debug: duration=1 rows=5 SHOW FULL COLUMNS FROM `payments`
+2019-10-17 11:33:41 Debug: duration=0 rows=1 SHOW INDEXES FROM `payments`
+2019-10-17 11:33:41 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'teasel' AND kcu.TABLE_NAME = 'payments' AND rc.TABLE_NAME = 'payments'
+2019-10-17 11:33:41 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'payments'
+2019-10-17 11:33:43 Debug: duration=1 rows=5 SHOW FULL COLUMNS FROM `payments`
+2019-10-17 11:33:43 Debug: duration=0 rows=1 SHOW INDEXES FROM `payments`
+2019-10-17 11:33:43 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'teasel' AND kcu.TABLE_NAME = 'payments' AND rc.TABLE_NAME = 'payments'
+2019-10-17 11:33:43 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'payments'
+2019-10-17 11:34:56 Debug: duration=1 rows=1 SHOW TABLES FROM `teasel`
+2019-10-17 11:34:56 Debug: duration=1 rows=5 SHOW FULL COLUMNS FROM `payments`
+2019-10-17 11:34:56 Debug: duration=0 rows=1 SHOW INDEXES FROM `payments`
+2019-10-17 11:34:56 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'teasel' AND kcu.TABLE_NAME = 'payments' AND rc.TABLE_NAME = 'payments'
+2019-10-17 11:34:56 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'payments'
+2019-10-17 11:34:57 Debug: duration=1 rows=5 SHOW FULL COLUMNS FROM `payments`
+2019-10-17 11:34:57 Debug: duration=0 rows=1 SHOW INDEXES FROM `payments`
+2019-10-17 11:34:57 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'teasel' AND kcu.TABLE_NAME = 'payments' AND rc.TABLE_NAME = 'payments'
+2019-10-17 11:34:57 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'payments'
+2019-10-17 11:42:34 Debug: duration=0 rows=0 BEGIN
+2019-10-17 11:42:35 Debug: duration=2 rows=5 SHOW FULL COLUMNS FROM `payments`
+2019-10-17 11:42:35 Debug: duration=0 rows=1 SHOW INDEXES FROM `payments`
+2019-10-17 11:42:35 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'teasel' AND kcu.TABLE_NAME = 'payments' AND rc.TABLE_NAME = 'payments'
+2019-10-17 11:42:35 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'payments'
+2019-10-17 11:42:35 Debug: duration=1 rows=0 INSERT INTO payments (order_uid, amount, created) VALUES (NULL, 0, '2019-10-17 11:42:35')
+2019-10-17 11:42:35 Debug: duration=0 rows=0 ROLLBACK

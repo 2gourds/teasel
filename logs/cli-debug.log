@@ -1,0 +1,23 @@
+2019-10-17 10:34:06 Notice: Notice (8): Undefined index: Orders in [C:\wamp64\www\teasel\vendor\cakephp\bake\src\View\Helper\DocBlockHelper.php, line 250]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 158
+Bake\View\Helper\DocBlockHelper::buildTableAnnotations() - ROOT\vendor\cakephp\bake\src\View\Helper\DocBlockHelper.php, line 250
+Twig\Template::getAttribute() - ROOT\vendor\twig\twig\src\Template.php, line 704
+__TwigTemplate_423ec241728ffae0f17d4468603c99d44ba02561354db54bbe1639be5e8e5b43::doDisplay() - ROOT\tmp\cache\twigView\d0\d0faa8d88aaa289445e8e9239dff1302ab667bdab782d870ed094aa3d6d90f82.php, line 33
+Twig\Template::displayWithErrorHandling() - ROOT\vendor\twig\twig\src\Template.php, line 455
+Twig\Template::display() - ROOT\vendor\twig\twig\src\Template.php, line 422
+Twig\Template::render() - ROOT\vendor\twig\twig\src\Template.php, line 434
+WyriHaximus\TwigView\View\TwigView::_render() - ROOT\vendor\wyrihaximus\twig-view\src\View\TwigView.php, line 180
+Bake\View\BakeView::render() - ROOT\vendor\cakephp\bake\src\View\BakeView.php, line 146
+Bake\Shell\Task\BakeTemplateTask::generate() - ROOT\vendor\cakephp\bake\src\Shell\Task\BakeTemplateTask.php, line 91
+Bake\Shell\Task\ModelTask::bakeTable() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 1017
+Bake\Shell\Task\ModelTask::bake() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 115
+Bake\Shell\Task\ModelTask::main() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 101
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 531
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 524
+Cake\Console\CommandRunner::runShell() - CORE\src\Console\CommandRunner.php, line 385
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 162
+[main] - ROOT\bin\cake.php, line 12
+
+
+

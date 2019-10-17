@@ -7,10 +7,10 @@ use Cake\ORM\Entity;
  * Payment Entity
  *
  * @property int $id
- * @property string $order_id
+ * @property string $order_uid
  * @property int $amount
  * @property \Cake\I18n\FrozenTime $created
- * @property \Cake\I18n\FrozenTime $updated
+ * @property \Cake\I18n\FrozenTime|null $updated
  */
 class Payment extends Entity
 {
@@ -24,7 +24,7 @@ class Payment extends Entity
      * @var array
      */
     protected $_accessible = [
-        'order_id' => true,
+        'order_uid' => true,
         'amount' => true,
         'created' => true,
         'updated' => true

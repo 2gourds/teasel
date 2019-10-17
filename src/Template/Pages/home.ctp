@@ -13,7 +13,7 @@
 	]);
 
 	// Call to PayPal JavaScript API. client-id: as setup from the PayPal Sandbox Dashboard
-	echo $this->Html->script('https://www.paypal.com/sdk/js?client-id=AeJ0nn1g-474J3Qadou0NdLs-dOYfcrE3GtVgyUhyXfhbdq0Oe3Xu6OojYO_14gP8gHzvh8WZlowdHN2');
+	echo $this->Html->script('https://www.paypal.com/sdk/js?client-id=Aczex-Z7Tgfk6-nZsbqIHuh0m9yKGXdYYll4rJxqOaT-4qbZsIZw5HDWQhLm16oQB1fK9GAG4tSLC0dm');
 ?>
 
 <div id="paypal-button-container"></div>

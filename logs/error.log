@@ -327,3 +327,43 @@ Request URL: /api/paypal/payment
 Request URL: /api/paypal/payment
 
 
+2019-10-17 11:42:35 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'order_uid' cannot be null (C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:38)
+#0 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(38): PDOStatement->execute(NULL)
+#1 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Database\Connection.php(333): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#5 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Database\Connection.php(336): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\ORM\Table.php(2128): Cake\Database\Query->execute()
+#8 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\ORM\Table.php(2020): Cake\ORM\Table->_insert(Object(App\Model\Entity\Payment), Array)
+#9 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\ORM\Table.php(1933): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Payment), Object(ArrayObject))
+#10 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\ORM\Table.php(1638): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Database\Connection.php(737): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\ORM\Table.php(1639): Cake\Database\Connection->transactional(Object(Closure))
+#13 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\ORM\Table.php(1934): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 C:\wamp64\www\teasel\src\Controller\ApisController.php(33): Cake\ORM\Table->save(Object(App\Model\Entity\Payment))
+#15 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Controller\Controller.php(609): App\Controller\ApisController->paymentByPaypal()
+#16 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#17 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ApisController))
+#18 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Http\BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\wamp64\www\teasel\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#32 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#33 C:\wamp64\www\teasel\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\wamp64\www\teasel\webroot\index.php(40): Cake\Http\Server->run()
+#35 {main}
+Request URL: /api/paypal/payment
+
+
