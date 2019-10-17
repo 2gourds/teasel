@@ -1,5 +1,12 @@
 {
-    "require": {
-        "cakephp/cakephp": "^3.8"
-    }
+	"require": {
+		"cakephp/cakephp": "^3.8",
+		"2gourds/teasel":"dev-master@dev"
+	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/2gourds/teasel" 
+		}
+	]
 }
