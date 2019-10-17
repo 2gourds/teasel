@@ -34,7 +34,7 @@
 			return actions.order.capture().then(function(details) {
 				alert('Transaction completed by ' + details.payer.name.given_name);
 				// Call server side API to save the transaction
-				return fetch('/paypal-transaction-complete', {
+				return fetch('/api/paypal/payment', {
 					method: 'post',
 					headers: {
 						'content-type': 'application/json'

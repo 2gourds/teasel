@@ -18,6 +18,10 @@ class ApisController extends AppController
 	 */
 	public function paymentByPaypal()
 	{
-		$this->autoRender = false;		
+		// Since the is an API call, disable rendering of views.
+		$this->autoRender = false;
+
+		$orderId = $this->request->getData('orderId');
+		debug($orderId);
 	}
 }
