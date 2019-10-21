@@ -38,12 +38,10 @@ class ProductsTable extends Table
         $this->setPrimaryKey('id');
 
         $this->belongsTo('Suppliers', [
-            'foreignKey' => 'supplier_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'supplier_id'
         ]);
         $this->belongsTo('Categories', [
-            'foreignKey' => 'category_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'category_id'
         ]);
     }
 

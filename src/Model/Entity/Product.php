@@ -11,8 +11,8 @@ use Cake\ORM\Entity;
  * @property string $supplier_sku
  * @property string $product_name
  * @property string $product_description
- * @property int $supplier_id
- * @property int $category_id
+ * @property int|null $supplier_id
+ * @property int|null $category_id
  * @property int $unit_price
  *
  * @property \App\Model\Entity\Supplier $supplier
