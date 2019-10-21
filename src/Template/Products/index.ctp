@@ -20,10 +20,9 @@
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('product_name', 'Name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('sku', 'SKU') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('supplier_sku', 'Supplier SKU') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('product_name', 'Name') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('product_description', 'Description') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('supplier_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('category_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('unit_price') ?></th>
@@ -34,10 +33,14 @@
             <?php foreach ($products as $product): ?>
             <tr>
                 <td><?= $this->Number->format($product->id) ?></td>
+                <td>
+                    <dl>
+                        <dt><?= h($product->product_name) ?></dt>
+                        <dd><?= h($product->product_description) ?></dd>
+                    </dl>
+                </td>
                 <td><?= h($product->sku) ?></td>
                 <td><?= h($product->supplier_sku) ?></td>
-                <td><?= h($product->product_name) ?></td>
-                <td><?= h($product->product_description) ?></td>
                 <td><?= $product->has('supplier') ? $this->Html->link($product->supplier->company_name, ['controller' => 'Suppliers', 'action' => 'view', $product->supplier->id]) : '' ?></td>
                 <td><?= $product->has('category') ? $this->Html->link($product->category->name, ['controller' => 'Categories', 'action' => 'view', $product->category->id]) : '' ?></td>
                 <td><?= $this->Number->format($product->unit_price) ?></td>
