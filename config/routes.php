@@ -64,6 +64,21 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 
+    $routes->connect(
+        '/products/',
+        ['controller' => 'Products', 'action' => 'index']
+    );
+
+    $routes->connect(
+        '/suppliers/',
+        ['controller' => 'Suupliers', 'action' => 'index']
+    );
+
+    $routes->connect(
+        '/categories/',
+        ['controller' => 'Categories', 'action' => 'index']
+    );
+
     $routes->connect('/api/paypal/payment', ['controller' => 'Apis', 'action' => 'paymentByPaypal']);    
 
     /*

@@ -52,7 +52,13 @@ class ProductsController extends AppController
     {
         $product = $this->Products->newEntity();
         if ($this->request->is('post')) {
-            $product = $this->Products->patchEntity($product, $this->request->getData());
+            $postData = $this->request->getData();
+
+            // If no SKU is defined, autogenerate.
+            if (!$postData['sku']) {
+                $postData['sku'] = $this->_generateSKU($postData['product_name']);
+            }
+            $product = $this->Products->patchEntity($product, $postData);
             if ($this->Products->save($product)) {
                 $this->Flash->success(__('The product has been saved.'));
 
@@ -109,5 +115,28 @@ class ProductsController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    /**
+     * generateSku method
+     *
+     * @param string|null $product Product name.
+     * @return string|null $results generated SKU.
+     */
+    private function _generateSKU($product, $id = null, $l = 2)
+    {
+        $results = ''; // empty string
+        $vowels = array('a', 'e', 'i', 'o', 'u', 'y'); // vowels
+
+        // Match every word that begins with a capital letter, added ucfirst() in case there is no uppercase letter
+        preg_match_all('/[A-Z][a-z]*/', ucfirst($product), $m);
+
+        foreach($m[0] as $substring) {
+            $substring = str_replace($vowels, '', strtolower($substring)); // String to lower case and remove all vowels
+            $results .= preg_replace('/([a-z]{'.$l.'})(.*)/', '$1', $substring); // Extract the first N letters.
+        }
+        $results .= '-'. str_pad($id, 4, 0, STR_PAD_LEFT); // Add the ID
+
+        return $results;
     }
 }

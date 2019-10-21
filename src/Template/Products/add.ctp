@@ -19,8 +19,8 @@
     <fieldset>
         <legend><?= __('Add Product') ?></legend>
         <?php
-            echo $this->Form->control('sku');
-            echo $this->Form->control('supplier_sku');
+            echo $this->Form->control('sku', ['label' => 'SKU']);
+            echo $this->Form->control('supplier_sku', ['label' => 'Supplier SKU']);
             echo $this->Form->control('product_name');
             echo $this->Form->control('product_description');
             echo $this->Form->control('supplier_id', ['options' => $suppliers]);

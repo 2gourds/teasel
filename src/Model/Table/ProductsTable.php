@@ -58,12 +58,6 @@ class ProductsTable extends Table
             ->allowEmptyString('id', null, 'create');
 
         $validator
-            ->scalar('sku')
-            ->maxLength('sku', 50)
-            ->requirePresence('sku', 'create')
-            ->notEmptyString('sku');
-
-        $validator
             ->scalar('supplier_sku')
             ->maxLength('supplier_sku', 50)
             ->requirePresence('supplier_sku', 'create')
