@@ -18,19 +18,7 @@
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('company_name') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('contact_fname') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('contact_lname') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('address_line1') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('address_line2') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('city') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('postal_code') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('country') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('phone') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('email') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('website') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('company_name', 'Supplier') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -38,19 +26,48 @@
             <?php foreach ($suppliers as $supplier): ?>
             <tr>
                 <td><?= $this->Number->format($supplier->id) ?></td>
-                <td><?= h($supplier->company_name) ?></td>
-                <td><?= h($supplier->contact_fname) ?></td>
-                <td><?= h($supplier->contact_lname) ?></td>
-                <td><?= h($supplier->address_line1) ?></td>
-                <td><?= h($supplier->address_line2) ?></td>
-                <td><?= h($supplier->city) ?></td>
-                <td><?= h($supplier->postal_code) ?></td>
-                <td><?= h($supplier->country) ?></td>
-                <td><?= h($supplier->phone) ?></td>
-                <td><?= h($supplier->email) ?></td>
-                <td><?= h($supplier->website) ?></td>
-                <td><?= h($supplier->created) ?></td>
-                <td><?= h($supplier->modified) ?></td>
+                <td>
+                    <dl>
+                        <dt>Company Name</dt>
+                        <dd><?= h($supplier->company_name) ?></dd>
+                        <?php if ($supplier->contact_fname || $supplier->contact_lname): ?>
+                            <dt>Contact Person</dt>
+                            <dd><?= h($supplier->contact_fname) ?> <?= h($supplier->contact_lname) ?></dd>
+                        <?php endif ?>
+                        <?php if ($supplier->address_line1): ?>
+                            <dt>Address Line 1</dt>
+                            <dd><?= h($supplier->address_line1) ?></dd>
+                        <?php endif ?>
+                        <?php if ($supplier->address_line2): ?>
+                            <dt>Address Line 2</dt>
+                            <dd><?= h($supplier->address_line2) ?></dd>
+                        <?php endif ?>
+                        <?php if ($supplier->city): ?>
+                            <dt>City</dt>
+                            <dd><?= h($supplier->city) ?></dd>
+                        <?php endif ?>
+                        <?php if ($supplier->postal_code): ?>
+                            <dt>Postal Code</dt>
+                            <dd><?= h($supplier->postal_code) ?></dd>
+                        <?php endif ?>
+                        <?php if ($supplier->country): ?>
+                            <dt>Country</dt>
+                            <dd><?= h($supplier->country) ?></dd>
+                        <?php endif ?>
+                        <?php if ($supplier->phone): ?>
+                            <dt>Phone</dt>
+                            <dd><?= h($supplier->phone) ?></dd>
+                        <?php endif ?>
+                        <?php if ($supplier->email): ?>
+                            <dt>Email</dt>
+                            <dd><?= h($supplier->email) ?></dd>
+                        <?php endif ?>
+                        <?php if ($supplier->website): ?>
+                            <dt>Website</dt>
+                            <dd><?= h($supplier->website) ?></dd> 
+                        <?php endif ?>
+                    </dl>
+                </td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $supplier->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $supplier->id]) ?>

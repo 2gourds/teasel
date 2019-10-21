@@ -66,7 +66,11 @@ class ProductsController extends AppController
             }
             $this->Flash->error(__('The product could not be saved. Please, try again.'));
         }
-        $suppliers = $this->Products->Suppliers->find('list', ['limit' => 200]);
+        $suppliers = $this->Products->Suppliers->find('list', [
+            'keyField' => 'id',
+            'valueField' => 'company_name',
+            'limit' => 200
+        ]);
         $categories = $this->Products->Categories->find('list', ['limit' => 200]);
         $this->set(compact('product', 'suppliers', 'categories'));
     }
@@ -92,7 +96,11 @@ class ProductsController extends AppController
             }
             $this->Flash->error(__('The product could not be saved. Please, try again.'));
         }
-        $suppliers = $this->Products->Suppliers->find('list', ['limit' => 200]);
+        $suppliers = $this->Products->Suppliers->find('list', [
+            'keyField' => 'id',
+            'valueField' => 'company_name',
+            'limit' => 200
+        ]);
         $categories = $this->Products->Categories->find('list', ['limit' => 200]);
         $this->set(compact('product', 'suppliers', 'categories'));
     }

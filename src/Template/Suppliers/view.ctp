@@ -16,8 +16,12 @@
     </ul>
 </nav>
 <div class="suppliers view large-9 medium-8 columns content">
-    <h3><?= h($supplier->id) ?></h3>
+    <h3><?= h($supplier->company_name) ?></h3>
     <table class="vertical-table">
+        <tr>
+            <th scope="row"><?= __('Id') ?></th>
+            <td><?= $this->Number->format($supplier->id) ?></td>
+        </tr>
         <tr>
             <th scope="row"><?= __('Company Name') ?></th>
             <td><?= h($supplier->company_name) ?></td>
@@ -61,10 +65,6 @@
         <tr>
             <th scope="row"><?= __('Website') ?></th>
             <td><?= h($supplier->website) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($supplier->id) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Created') ?></th>
