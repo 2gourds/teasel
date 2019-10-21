@@ -71,7 +71,7 @@ Router::scope('/', function (RouteBuilder $routes) {
 
     $routes->connect(
         '/suppliers/',
-        ['controller' => 'Suupliers', 'action' => 'index']
+        ['controller' => 'Suppliers', 'action' => 'index']
     );
 
     $routes->connect(
